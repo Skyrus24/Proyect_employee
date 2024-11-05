@@ -10,6 +10,8 @@ def calcular_salario():
 # Como el sistema se basa en calcular el salario por horas trabajadas, vamos a pedir esos datos primero en primera instancia
   salarioPorHora = int(input("Ingrese el salario fijo por hora: "))
   horasTrabajadas = int(input("Ingrese las horas trabajadas: "))
+  
+  ## abel: yo solicitaré estos datos previamente, por lo tanto te los enviaré después
 
 # Uno de los requisitos es que el prograga admita la posibilidad de que el individuo
 # tenga comision y calcular el porcentaje de ganancia en base a su productividad
