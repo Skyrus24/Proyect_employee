@@ -1,16 +1,18 @@
 # Gestión de Empleados:Registro y actualización de información personal y laboral de los empleados. (nro Legajo, nombre, apellido, fecha nacimiento, dirección, barrio, ciudad, trabajos anteriores, puestos, años de trabajo)
-import  gestion_empleados as ge
+import  gestion_empleados
+import contrato
 class Empleado:
     # Construye los atributos
     def __init__(self):
-        self.nombre = None
-        self.apellido = None
+        self.nombre = str
+        self.apellido = str
         self.fecha_nac = None
-        self.direc = None
-        self.barrio = None
-        self.ciudad = None
+        self.direc = str
+        self.barrio = str
+        self.ciudad = str
+        self.ci = int
         self.trabajos_anteriores = []
-
+        c
 
     # Registra trabajos anteriores del empleado
     def regist_trabajos(self):
@@ -28,13 +30,14 @@ class Empleado:
     # Registrar todos los datos del empleado
     def registro(self):
         self.nombre = input("Ingrese nombre del trabajador: ")
+        self.ci = input("Ingrese cédula de indentidad del trabajador: ")
         self.apellido = input("Ingrese apellido del trabajador: ")
         self.fecha_nac = input("Ingrese fecha de nacimiento del trabajador(DD/MM/AA): ")
         self.direc = input("Ingrese dirección del trabajador: ")
         self.barrio = input("Ingrese barrio del trabajador: ")
         self.ciudad = input("Ingrese ciudad del trabajador: ")
         self.regist_trabajos()
-        self.contrato()
+        
 
 
 
