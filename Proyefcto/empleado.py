@@ -45,8 +45,6 @@ class Empleado:
             print(f"Trabajo anterior: {trabajo[0]}\nPuesto: {trabajo[1]}\nAños de trabajo: {trabajo[2]}")
 
 
-    def contrato(self):
-
 
 if __name__ == "__main__":
     test = Empleado()

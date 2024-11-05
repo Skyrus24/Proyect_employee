@@ -11,9 +11,9 @@ def calcular_salario():
   salarioPorHora = int(input("Ingrese el salario fijo por hora: "))
   horasTrabajadas = int(input("Ingrese las horas trabajadas: "))
   
-  ## abel: yo solicitaré estos datos previamente, por lo tanto te los enviaré después
+      ## abel: yo solicitaré estos datos previamente, por lo tanto te los enviaré después
 
-# Uno de los requisitos es que el prograga admita la posibilidad de que el individuo
+# Uno de los requisitos es que el programa admita la posibilidad de que el individuo
 # tenga comision y calcular el porcentaje de ganancia en base a su productividad
   productividad = int(input("Ingrese la productividad/ventas del mes: "))
 
@@ -103,3 +103,8 @@ datos = calcular_salario()
 # Si queremos los datos, llamamos a la funcion de imprimir los datos en pantalla
 imprimir_recibo_empleado(datos)
 
+
+
+
+
+## si te digo que tengo que cambiar absolutamente todo tu código porque vos pedís todo en inputs, y yo ya pido todos los datos por tanto tenemos que interconectar:/
