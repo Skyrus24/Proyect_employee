@@ -7,7 +7,7 @@ def menu():
             "3- Mantenimiento de historial laboral y salarial.\n"
             "4- Mantenimiento de contratos y tipos de empleados.\n"
             "5- Salir.\n")
-   opcion()
+    opcion()
 
 
 def opcion():
@@ -15,7 +15,7 @@ def opcion():
         # Op 1 = Registro
         if op == 1:
             emp = empleado.Empleado()
-            emp.registro()#
+            emp.registro()
             
 
 
