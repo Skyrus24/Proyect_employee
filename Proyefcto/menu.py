@@ -15,9 +15,10 @@ def opcion():
         # Op 1 = Registro
         if op == 1:
             emp = empleado.Empleado()
-            emp.registro()
+            emp.registro()#
+            
 
 
 
 
-
+## puto el que lo lea
