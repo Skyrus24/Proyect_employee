@@ -21,4 +21,3 @@ def opcion():
 
 
 
-## puto el que lo lea
