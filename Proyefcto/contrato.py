@@ -13,12 +13,13 @@ class Contrato:
         self.puesto = str
         self.salario = int
         self.tipo_contrato = int
-        
+           
     def registro(self):
         try:
+            self.fecha_format = 0
             self.fecha = input("Ingrese la fecha de contrato del trabajador(DD/MM/AAAA): ")
-            fecha_format = datetime.strptime( self.fecha,"%d / %m / %Y")
-            print(self.fecha)
+            self.fecha_format = datetime.strftime(self.fecha,"%d/%m/%Y")
+            print(self.fecha_format)
         except:
             pass
 
@@ -26,7 +27,7 @@ class Contrato:
 if __name__ == "__main__":
     contrato = Contrato()
     contrato.registro()
-    print(contrato.fecha)
+    print(contrato.fecha_format)
     
     # contr = Contrato()
     # print(contr.idlegajo)
