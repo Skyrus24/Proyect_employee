@@ -17,11 +17,8 @@ class Contrato:
     def registro(self):
         try:
             self.fecha = input("Ingrese la fecha de contrato del trabajador(DD/MM/AAAA): ")
-            fecha_format = datetime.strptime("Fecha entrada: %d / %m / %Y")
+            fecha_format = datetime.strptime( self.fecha,"%d / %m / %Y")
             print(self.fecha)
-            
-                
-                
         except:
             pass
 
