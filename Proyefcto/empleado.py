@@ -36,7 +36,8 @@ class Empleado:
         self.barrio = input("Ingrese barrio del trabajador: ")
         self.ciudad = input("Ingrese ciudad del trabajador: ")
         self.regist_trabajos()
-        
+        cont = Contrato(self.nombre, self.ci)
+        self.contrato = cont.registro()
 
 
 
