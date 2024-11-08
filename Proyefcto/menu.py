@@ -11,11 +11,15 @@ def menu():
 
 
 def opcion():
-        op = input("Ingrese su opción: ")
+        op = int(input("Ingrese su opción: "))
         # Op 1 = Registro
         if op == 1:
             emp = empleado.Empleado()
-            emp.registro()
+            
+        
+        
+menu()
+opcion()
             
 
 

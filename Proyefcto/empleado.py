@@ -12,6 +12,7 @@ class Empleado:
         self.ciudad = str
         self.ci = int
         self.trabajos_anteriores = []
+        self.registro()
 
     # Registra trabajos anteriores del empleado
     def regist_trabajos(self):
@@ -36,8 +37,8 @@ class Empleado:
         self.barrio = input("Ingrese barrio del trabajador: ")
         self.ciudad = input("Ingrese ciudad del trabajador: ")
         self.regist_trabajos()
-        cont = Contrato(self.nombre, self.ci)
-        self.contrato = cont.registro()
+        cont = Contrato(self)
+        
 
 
 

@@ -2,9 +2,9 @@ class Empleados:
     def __init__(self):
         self.employeeslist = []
 
-    def añadiremp(self, entrada):
+    def añadir_emp(self, entrada):
         self.employeeslist.append(entrada)
 
-    def listaremp(self):
+    def listar_emp(self):
         for emp in self.employeeslist:
             print(emp)
