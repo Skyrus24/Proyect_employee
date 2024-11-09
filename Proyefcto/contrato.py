@@ -99,8 +99,6 @@ class Contrato:
         self.puesto()
         
         
-        return self
-        
         
         
 
