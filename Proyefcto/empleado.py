@@ -36,7 +36,11 @@ class Empleado:
         self.direc = input("Ingrese dirección del trabajador: ")
         self.barrio = input("Ingrese barrio del trabajador: ")
         self.ciudad = input("Ingrese ciudad del trabajador: ")
+        
+        # Llama a la función de registrar trabajos 
         self.regist_trabajos()
+        
+        # Ejecuta una instancia del objeto contrato, para almacenarse en empleado.
         cont = Contrato(self)
         
 
@@ -45,12 +49,9 @@ class Empleado:
     # Registra para imprimir los datos cada que se requiera
     def imprimir_datos(self):
         print(f"Nro legajo:{self.idlegajo}, Nombre: {self.nombre}, Apellido: {self.apellido}, Fecha de nacimiento: {self.fecha_nac}, Dirección:{self.direc}, Barrio: {self.barrio}, Ciudad:{self.ciudad}")
+        print(f"{self.cont}")
         for trabajo in self.trabajos_anteriores:
             print(f"Trabajo anterior: {trabajo[0]}\nPuesto: {trabajo[1]}\nAños de trabajo: {trabajo[2]}")
-            
-    
-    def asignarcontrato(self):
-        contrato = Contrato()
         
 
 
