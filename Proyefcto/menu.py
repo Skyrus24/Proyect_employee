@@ -1,13 +1,16 @@
-import empleado
-import gestion_empleados
+from empleado import Empleado
+from employees import Empleados
+import os
 
+ne = Empleados()
 
 def menu_Princ():
     pass
 
     
 def menu_gestion():
-    print("¡Bienvenido al sistema!.\n"
+    cl()
+    print("Menú del empleado. ¿Qué desea hacer?.\n"
             "1- Registrar un empleado.\n"
             "2- Actualizar datos de un empleado.\n"
             "3- Consultar datos de un empleado.\n"
@@ -18,12 +21,15 @@ def menu_gestion():
 
 def opcion_gestion():
         op = int(input("Ingrese su opción: "))
-        # Op 1 = Registro
+        # Opción 1: Registro
         if op == 1:
-            emp = empleado.Empleado()
+            emp = Empleado()
             
 
-
+def cl():
+    os.system('cls')
+    
+    
 if __name__ == "__main__":
     pass
             

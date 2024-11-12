@@ -1,5 +1,4 @@
 import datetime
-import empleado
 class Contrato:
     # inicializa los legajos en 0
     legajo = 0
@@ -16,11 +15,25 @@ class Contrato:
         self.registro()
     
     
+    def registro(self):
+        # Asignar la fecha de firma del contrato
+        self.fecha_contrato()
+        
+        # Asigna un número de legajo y automáticamente suma +1
+        self.idlegajo = Contrato.legajo
+        Contrato.legajo += 1
+        
+        # Define un puesto para el contrato
+        self.puesto()
+        
+        # Definir tipo de contrato
+        self.tipo_contrato()
+    
+    
     def fecha_contrato(self):
         self.fecha = input("Ingrese la fecha de contrato del empleado(DD/MM/YYYY): ")
-        # comprueba si la fecha ingresada está en el formato correcto, de no ser así, reiniciará 
         try:
-            # Comprueba si la fecha ingresada está correcta, sino, vuelve a ejecutarse.
+        # comprueba si la fecha ingresada está en el formato correcto, de no ser así, reiniciará 
             self.fecha = datetime.datetime.strptime(self.fecha, "%d/%m/%Y").date()
         except:
             print("Formato de fecha incorrecto(Debe ingresar Día/Mes/año. Ejemplo: 24/08/2006)")
@@ -38,25 +51,6 @@ class Contrato:
                 break
 
 
-    def sueldo(self, op):
-        # Establecer una variable del sueldo mínimo actual
-        sueld_min = 2798309
-        sueld_min_horas = sueld_min / 192 # Se divide ya que se trabajan 240 horas en promedio por mes.
-        while True:
-            try:
-                if op == 1 or op == 2:
-                    self.sueldo = int(input("Ingrese el sueldo del trabajador: "))
-                    # Verificar que el sueldo ingresado no sea menor al sueldo mínimo
-                    if self.sueldo < sueld_min:
-                        print(f"ERROR: El sueldo no puede ser menor al sueldo minimo({sueld_min}).")
-                    else:
-                        break
-                else:
-                    sueld_horas = int(input("Ingrese el sueldo por horas del trabajador."))
-                    if sueld_horas < sueld_min_horas:
-                        print(f"ERROR: El sueldo por horas no debe ser menor a {sueld_min_horas}")
-            except ValueError:
-                print("ERROR: Debe ingresar solo el monto del sueldo.")
     
     
     def tipo_contrato(self):
@@ -83,35 +77,23 @@ class Contrato:
                 print("Ingrese un valor correcto de tipo de contrato")
           
         
-    
-    def registro(self):
-        # Asignar la fecha de firma del contrato
-        self.fecha_contrato()
+    def sueldo(self, op):
+        # Establecer una variable del sueldo mínimo actual
+        sueld_min = 2798309
+        sueld_min_horas = sueld_min / 192 # Se divide ya que se trabajan 192 horas en promedio por mes.
+        while True:
+            try:
+                if op == 1 or op == 2:
+                    self.sueldo = int(input("Ingrese el sueldo del trabajador: "))
+                    # Verificar que el sueldo ingresado no sea menor al sueldo mínimo
+                    if self.sueldo < sueld_min:
+                        print(f"ERROR: El sueldo no puede ser menor al sueldo minimo({sueld_min}).")
+                    else:
+                        break
+                else:
+                    sueld_horas = int(input("Ingrese el sueldo por horas del trabajador."))
+                    if sueld_horas < sueld_min_horas:
+                        print(f"ERROR: El sueldo por horas no debe ser menor a {sueld_min_horas}")
+            except ValueError:
+                print("ERROR: Debe ingresar solo el monto del sueldo.")
         
-        # Asigna un número de legajo y automáticamente suma +1
-        self.idlegajo = Contrato.legajo
-        Contrato.legajo += 1
-        
-        # Definir tipo de contrato
-        self.tipo_contrato()
-        
-        # Define un puesto para el contrato
-        self.puesto()
-        
-        
-        
-        
-
-        
-        
-        
-
-if __name__ == "__main__":    
-    contrato = Contrato()
-    contrato.registro()
-    
-
-    
-    # contr = Contrato()
-    # print(contr.idlegajo)
-    

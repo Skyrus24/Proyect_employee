@@ -1,10 +1,12 @@
 # Gestión de Empleados:Registro y actualización de información personal y laboral de los empleados. (nro Legajo, nombre, apellido, fecha nacimiento, dirección, barrio, ciudad, trabajos anteriores, puestos, años de trabajo)
 import  gestion_empleados
 from contrato import Contrato
-from employees import Empleados as list_emp
+import inspect
+
 class Empleado:
     # Construye los atributos
     def __init__(self):
+        # Inicializa los datos del empleado
         self.nombre = str
         self.apellido = str
         self.fecha_nac = None
@@ -15,21 +17,10 @@ class Empleado:
         self.trabajos_anteriores = []
         self.registro()
 
-    # Registra trabajos anteriores del empleado
-    def regist_trabajos(self):
-        trabajo = input("Ingrese su antiguo trabajo (0 para salir): ")
-        if trabajo == "0":
-            trabajo = ""
-        else:
-            puesto = input("Ingrese su antiguo puesto: ")
-            año = input("Ingrese sus años de trabajo: ")
-            trabajos_ant = [trabajo,puesto,año]
-            self.trabajos_anteriores.append(trabajos_ant)
-            self.regist_trabajos()
 
-
-    # Registrar todos los datos del empleado
     def registro(self):
+        
+        # Registrar todos los datos del empleado
         self.nombre = input("Ingrese nombre del trabajador: ")
         self.apellido = input("Ingrese apellido del trabajador: ")
         self.ci = int(input("Ingrese cédula de indentidad del trabajador: "))
@@ -44,10 +35,19 @@ class Empleado:
         # Ejecuta una instancia del objeto contrato, para almacenarse en empleado.
         cont = Contrato(self)
         
-        # Añadir a la lista de 
-        lista_empleados = list_emp()
-        envio = self
-        lista_empleados.añadir_emp(envio)
+
+    # Registra trabajos anteriores del empleado
+    def regist_trabajos(self):
+        trabajo = input("Ingrese su antiguo trabajo (0 para salir): ")
+        if trabajo == "0":
+            trabajo = ""
+        else:
+            puesto = input("Ingrese su antiguo puesto: ")
+            año = input("Ingrese sus años de trabajo: ")
+            trabajos_ant = [trabajo,puesto,año]
+            self.trabajos_anteriores.append(trabajos_ant)
+            self.regist_trabajos()
+
 
 
 
@@ -58,6 +58,20 @@ class Empleado:
         for trabajo in self.trabajos_anteriores:
             print(f"Trabajo anterior: {trabajo[0]}\nPuesto: {trabajo[1]}\nAños de trabajo: {trabajo[2]}")
         
+
+
+
+    # función recursiva para verificar que un input no esté vacío
+    def no_input(self, valor, mensaje):
+        if not valor.strip():
+            print("El valor no puede estar vacío. Inténtelo de nuevo.")
+            # Obtener el nombre del atributo llamador
+            frame = inspect.currentframe().f_back
+            atributo = [name for name, val in frame.f_locals.items() if val is valor][0]
+            # Solicitar nuevamente el input y llamar recursivamente
+            nuevo_valor = input(mensaje)
+            return self.no_input(nuevo_valor, mensaje)
+        return valor
 
 if __name__ == "__main__":
     test = Empleado()
