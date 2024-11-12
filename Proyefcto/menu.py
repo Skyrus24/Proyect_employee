@@ -1,13 +1,13 @@
 from empleado import Empleado
 from employees import Empleados
-import os
 
 ne = Empleados()
 
 def menu_Princ():
     pass
 
-    
+
+# menú que gestionará todo lo relacionado a la gestion de empleados
 def menu_gestion():
     cl()
     print("Menú del empleado. ¿Qué desea hacer?.\n"
@@ -19,15 +19,21 @@ def menu_gestion():
     opcion_gestion()
 
 
+# parte lógica del menpú de gestión de empleados
 def opcion_gestion():
+    try:
         op = int(input("Ingrese su opción: "))
-        # Opción 1: Registro
         if op == 1:
+            # Opción 1: Registrar empleado
             emp = Empleado()
-            
+            ne.añadir_emp(emp)
+        elif op == 2:
+            # Opción 2: Actualizar datos de un empleado
+            pass
+    except ValueError:
+        pass
 
-def cl():
-    os.system('cls')
+
     
     
 if __name__ == "__main__":

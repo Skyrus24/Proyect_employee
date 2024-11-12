@@ -1,7 +1,6 @@
 # Gestión de Empleados:Registro y actualización de información personal y laboral de los empleados. (nro Legajo, nombre, apellido, fecha nacimiento, dirección, barrio, ciudad, trabajos anteriores, puestos, años de trabajo)
-import  gestion_empleados
 from contrato import Contrato
-import inspect
+import datetime
 
 class Empleado:
     # Construye los atributos
@@ -18,8 +17,15 @@ class Empleado:
         self.registro()
 
 
+    def ingresar_fecha(self, mensaje):
+        while True:
+            fecha = input(mensaje)
+            try:
+                return datetime.datetime.strptime(fecha, "%d/%m/%Y").date()
+            except ValueError:
+                print("Formato de fecha incorrecto. Debe ingresar Día/Mes/Año. Ejemplo: 24/08/2006")
+
     def registro(self):
-        
         # Registrar todos los datos del empleado
         self.nombre = input("Ingrese nombre del trabajador: ")
         self.apellido = input("Ingrese apellido del trabajador: ")
@@ -48,7 +54,40 @@ class Empleado:
             self.trabajos_anteriores.append(trabajos_ant)
             self.regist_trabajos()
 
+    
+    def actualizar_datos(self):
+        while True:
+            print("\nSeleccione el dato que desea actualizar:")
+            print("1. Nombre")
+            print("2. Apellido")
+            print("3. Fecha de nacimiento")
+            print("4. Dirección")
+            print("5. Barrio")
+            print("6. Ciudad")
+            print("7. Cédula de identidad")
+            print("0. Salir")
 
+            opcion = input("Ingrese el número de la opción: ")
+
+            if opcion == "1":
+                self.nombre = input("Ingrese el nuevo nombre: ")
+            elif opcion == "2":
+                self.apellido = input("Ingrese el nuevo apellido: ")
+            elif opcion == "3":
+                self.fecha_nac = self.ingresar_fecha("Ingrese la nueva fecha de nacimiento (DD/MM/YYYY): ")
+            elif opcion == "4":
+                self.direc = input("Ingrese la nueva dirección: ")
+            elif opcion == "5":
+                self.barrio = input("Ingrese el nuevo barrio: ")
+            elif opcion == "6":
+                self.ciudad = input("Ingrese la nueva ciudad: ")
+            elif opcion == "7":
+                self.ci = int(input("Ingrese la nueva cédula de identidad: "))
+            elif opcion == "0":
+                print("Saliendo del menú de actualización.")
+                break
+            else:
+                print("Opción inválida. Intente de nuevo.")
 
 
     # Registra para imprimir los datos cada que se requiera
@@ -58,25 +97,3 @@ class Empleado:
         for trabajo in self.trabajos_anteriores:
             print(f"Trabajo anterior: {trabajo[0]}\nPuesto: {trabajo[1]}\nAños de trabajo: {trabajo[2]}")
         
-
-
-
-    # función recursiva para verificar que un input no esté vacío
-    def no_input(self, valor, mensaje):
-        if not valor.strip():
-            print("El valor no puede estar vacío. Inténtelo de nuevo.")
-            # Obtener el nombre del atributo llamador
-            frame = inspect.currentframe().f_back
-            atributo = [name for name, val in frame.f_locals.items() if val is valor][0]
-            # Solicitar nuevamente el input y llamar recursivamente
-            nuevo_valor = input(mensaje)
-            return self.no_input(nuevo_valor, mensaje)
-        return valor
-
-if __name__ == "__main__":
-    test = Empleado()
-    test.imprimir_datos()
-    
-    
-
-
