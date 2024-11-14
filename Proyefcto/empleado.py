@@ -1,7 +1,7 @@
 # Gestión de Empleados:Registro y actualización de información personal y laboral de los empleados. (nro Legajo, nombre, apellido, fecha nacimiento, dirección, barrio, ciudad, trabajos anteriores, puestos, años de trabajo)
 from contrato import Contrato
 import datetime
-
+import utility as u
 class Empleado:
     # Construye los atributos
     def __init__(self):
@@ -27,6 +27,7 @@ class Empleado:
 
     def registro(self):
         # Registrar todos los datos del empleado
+        u.cl()
         self.nombre = input("Ingrese nombre del trabajador: ")
         self.apellido = input("Ingrese apellido del trabajador: ")
         self.ci = int(input("Ingrese cédula de indentidad del trabajador: "))
@@ -57,6 +58,7 @@ class Empleado:
     
     def actualizar_datos(self):
         while True:
+            u.cl()
             print("\nSeleccione el dato que desea actualizar:")
             print("1. Nombre")
             print("2. Apellido")
@@ -86,14 +88,22 @@ class Empleado:
             elif opcion == "0":
                 print("Saliendo del menú de actualización.")
                 break
+                return False
             else:
                 print("Opción inválida. Intente de nuevo.")
+                
 
 
     # Registra para imprimir los datos cada que se requiera
     def imprimir_datos(self):
-        print(f"Nombre: {self.nombre}\nApellido: {self.apellido}\nFecha de nacimiento: {self.fecha_nac}, Dirección:{self.direc}\nBarrio: {self.barrio}\nCiudad:{self.ciudad}")
-        print("")
+        print(f"Nombre(s): {self.nombre}\n"
+              f"Apellido(s): {self.apellido}\n"
+              f"Fecha de nacimiento: {self.fecha_nac}\n" 
+              f"Dirección:{self.direc}\n"
+              f"Barrio: {self.barrio}\n"
+              f"Ciudad:{self.ciudad}\n")
         for trabajo in self.trabajos_anteriores:
-            print(f"Trabajo anterior: {trabajo[0]}\nPuesto: {trabajo[1]}\nAños de trabajo: {trabajo[2]}")
+            print(f"Trabajo anterior: {trabajo[0]}\n"
+                  f"Puesto: {trabajo[1]}\n"
+                  f"Años de trabajo: {trabajo[2]}")
         
