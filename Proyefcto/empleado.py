@@ -92,6 +92,7 @@ class Empleado:
             else:
                 print("Opción inválida. Intente de nuevo.")
                 
+                
 
 
     # Registra para imprimir los datos cada que se requiera
@@ -107,3 +108,5 @@ class Empleado:
                   f"Puesto: {trabajo[1]}\n"
                   f"Años de trabajo: {trabajo[2]}")
         
+if __name__  == "__main__":
+    emp = Empleado()

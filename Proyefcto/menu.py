@@ -13,7 +13,7 @@ def menu_gestion():
     print("Menú del empleado. ¿Qué desea hacer?.\n"
             "1- Registrar un empleado.\n"
             "2- Actualizar datos de un empleado.\n"
-            "3- Consultar datos de un empleado.\n"
+            "3- Listar nómina de empleados.\n"
             "4- Eliminar un empleado.\n"
             "5- Atrás.\n")
     opcion_gestion()
@@ -32,8 +32,20 @@ def opcion_gestion():
         elif op == 2:
             # Opción 2: Actualizar datos de un empleado
             ne.actualizar_emp()
-            
+        elif op == 3:
+            # Opción 3: Listar empleados
+            ne.listar_emp()
+        elif op == 4:
+            # Opción 4: Eliminar un empleado.
+            ne.eliminar_emp()
+        elif op ==5:
+            # acá irá la llamada al menú principal
+            pass
+        else:
+            print("Opción inválida")
+            opcion_gestion()
                 
     except ValueError:
-        pass
+        print("Ingrese una opción numérica")
+        opcion_gestion()
 
