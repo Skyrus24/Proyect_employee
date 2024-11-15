@@ -1,4 +1,5 @@
 import datetime
+import utility as u
 class Contrato:
     # inicializa los legajos en 0
     legajo = 0
@@ -17,7 +18,7 @@ class Contrato:
     
     def registro(self):
         # Asignar la fecha de firma del contrato
-        self.fecha_contrato()
+        self.fecha = u.fecha_formato()
         
         # Asigna un número de legajo y automáticamente suma +1
         self.idlegajo = Contrato.legajo
@@ -28,16 +29,6 @@ class Contrato:
         
         # Definir tipo de contrato
         self.tipo_contrato()
-    
-    
-    def fecha_contrato(self):
-        self.fecha = input("Ingrese la fecha de contrato del empleado(DD/MM/YYYY): ")
-        try:
-        # comprueba si la fecha ingresada está en el formato correcto, de no ser así, reiniciará 
-            self.fecha = datetime.datetime.strptime(self.fecha, "%d/%m/%Y").date()
-        except:
-            print("Formato de fecha incorrecto(Debe ingresar Día/Mes/año. Ejemplo: 24/08/2006)")
-            self.fecha_contrato()
 
 
     def puesto(self):
