@@ -1,6 +1,6 @@
-from empleado import Empleado
-from employees import Empleados
-import utility as u
+from moduloEmpleados.empleado import Empleado
+from moduloEmpleados.gestionEmpleados import Empleados
+import utility.utility as u
 ne = Empleados()
 # menú que gestionará todo lo relacionado a la gestion de empleados
 def menu_gestion():

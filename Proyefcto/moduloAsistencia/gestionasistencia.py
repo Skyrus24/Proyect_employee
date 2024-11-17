@@ -31,8 +31,10 @@ def permisos():
         razon = input("Ingrese la razón de su permiso.")
         estado = 3
     elif op == 3:
-        fecha_inicio = int(input("Ingrese fecha de inicio de las vacaciones"))
+        fecha_inicio = 
         fecha_final = int(input("Ingrese fecha de fin de las vacaciones"))
-            
+    elif op == 4:
+        
+def 
 
     

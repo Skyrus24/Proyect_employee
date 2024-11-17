@@ -1,5 +1,5 @@
 # acá voy a gestionar todo el menú de asistencia
-import utility as u
+import utility.utility as u
 import moduloAsistencia.gestionasistencia as gest_Asis
 import moduloEmpleados.gestionEmpleados as gest_Empe
 def menu_asis():
