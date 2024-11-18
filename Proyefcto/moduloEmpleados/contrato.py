@@ -1,8 +1,7 @@
 import datetime
-import utility.utility as u
+import utility.utility as utl
 class Contrato:
-    # inicializa los legajos en 0
-    legajo = 0
+    
 
 
     def __init__(self, objeto):
@@ -13,16 +12,13 @@ class Contrato:
         self.salario = int
         self.tipo_contrato = int
         self.ci = getattr(objeto, "ci")
+        self.idlegajo = getattr(objeto, "idlegajo")
         self.registro()
     
     
     def registro(self):
         # Asignar la fecha de firma del contrato
-        self.fecha = u.fecha_formato()
-        
-        # Asigna un número de legajo y automáticamente suma +1
-        self.idlegajo = Contrato.legajo
-        Contrato.legajo += 1
+        self.fecha = utl.fecha_formato()
         
         # Define un puesto para el contrato
         self.puesto()

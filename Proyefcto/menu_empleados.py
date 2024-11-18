@@ -1,10 +1,10 @@
 from moduloEmpleados.empleado import Empleado
 from moduloEmpleados.gestionEmpleados import Empleados
-import utility.utility as u
+import utility.utility as utl
 ne = Empleados()
 # menú que gestionará todo lo relacionado a la gestion de empleados
-def menu_gestion():
-    u.cl()
+def menu_gestion_empleados():
+    utl.cl()
     print("Menú del empleado. ¿Qué desea hacer?.\n"
             "1- Registrar un empleado.\n"
             "2- Actualizar datos de un empleado.\n"
@@ -38,9 +38,9 @@ def opcion_gestion():
             pass
         else:
             print("Opción inválida")
-            opcion_gestion()
+            menu_gestion_empleados()
                 
     except ValueError:
         print("Ingrese una opción numérica")
-        opcion_gestion()
+        menu_gestion_empleados()
 

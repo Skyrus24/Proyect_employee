@@ -1,4 +1,4 @@
-import utility.utility as u
+import utility.utility as utl
 
 class Empleados:
     def __init__(self):
@@ -21,7 +21,7 @@ class Empleados:
                 try:
                     found = False
                     while found == False:
-                        u.cl()
+                        utl.cl()
                         ci = int(input("Ingrese CI del empleado a actualizar: "))
                         for emp in self.employeeslist:
                             if emp.ci == ci:
@@ -41,7 +41,7 @@ class Empleados:
                 try:
                     found = False
                     while found != True:
-                        u.cl()
+                        utl.cl()
                         ci = int(input("Ingrese CI del empleado a eliminar: "))
                         index = 0
                         for emp in self.employeeslist:

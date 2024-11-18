@@ -4,6 +4,7 @@ import datetime
 import os
 import inspect
 
+
 ## función para limpiar pantalla
 def cl():
     os.system('cls')
@@ -36,3 +37,30 @@ def no_input(self, valor, mensaje):
         nuevo_valor = input(mensaje)
         return self.no_input(nuevo_valor, mensaje)
     return valor
+
+
+
+
+ # función para determinar cantidas de días de un mes def dias_del_mes(mes):
+def dias_del_mes():
+    # Grupos de meses según su cantidad de días
+    dias_31 = [1, 3, 5, 7, 8, 10, 12]  # Meses con 31 días
+    dias_30 = [4, 6, 9, 11]            # Meses con 30 días
+
+    while True:
+        try:
+            mes = int(input("Ingrese número del mes(Por ejemplo, 1 para enero): "))
+            if mes in dias_31:
+                return 31
+            elif mes in dias_30:
+                return 30
+            elif mes == 2:
+                return 28
+            else:
+                print("Mes inválido")
+        except ValueError:
+            print("ERROR: Debes ingresar un NÚMERO para el mes.")
+
+
+if __name__ == "__main__":
+    print(f"El día tiene {dias_del_mes()} días")
