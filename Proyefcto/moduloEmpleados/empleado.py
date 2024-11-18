@@ -1,6 +1,5 @@
 # Gestión de Empleados:Registro y actualización de información personal y laboral de los empleados. (nro Legajo, nombre, apellido, fecha nacimiento, dirección, barrio, ciudad, trabajos anteriores, puestos, años de trabajo)
 from contrato import Contrato
-import datetime
 import utility.utility as utl
 class Empleado:
     # inicializa los legajos en 0
