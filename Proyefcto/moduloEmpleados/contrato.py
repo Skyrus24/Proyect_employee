@@ -1,9 +1,5 @@
-import datetime
 import utility.utility as utl
 class Contrato:
-    
-
-
     def __init__(self, objeto):
         # No sabía que existía esta función, sirve para obtener un atributo de un objeto enviado.
         self.nombre = getattr(objeto, "nombre")
@@ -18,7 +14,7 @@ class Contrato:
     
     def registro(self):
         # Asignar la fecha de firma del contrato
-        self.fecha = utl.fecha_formato()
+        self.fecha = utl.fecha_formato("Ingrese la fecha del contrato(DD/MM/YYYY)")
         
         # Define un puesto para el contrato
         self.puesto()

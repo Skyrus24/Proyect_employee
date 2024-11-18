@@ -1,6 +1,6 @@
 from moduloEmpleados.gestionEmpleados import Empleados
-from menu_empleados import menu_gestion_empleados
-from menu_asistencia import Asistencia, menu_asistencia
+from menu_gestion_empleados import menu_gestion_empleados
+from menu_gestion_asistencia import Asistencia, menu_asistencia
 import utility.utility as utl
 
 # Crear una instancia única del objeto Empleados

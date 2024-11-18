@@ -1,18 +1,21 @@
-import utility.utility as utl
+from utility import utility as utl
 
 class Empleados:
     def __init__(self):
         self.employeeslist = []
 
-    def añadir_emp(self, entrada:object):
+    def añadir_emp(self, entrada: object):
         self.employeeslist.append(entrada)
         return "Nuevo empleado añadido correctamente."
         
 
     def listar_emp(self):
-        for emp in self.employeeslist:
-            print(emp)
-    
+        if self.employeeslist == []:
+            print("ERROR: La nómina está vacía")
+        else:  
+            for emp in self.employeeslist:
+                print(emp)
+        
     def actualizar_emp(self):
         if self.employeeslist == []:
             print("La nómina de empleados está vacía.")

@@ -1,5 +1,5 @@
 # Gestión de Empleados:Registro y actualización de información personal y laboral de los empleados. (nro Legajo, nombre, apellido, fecha nacimiento, dirección, barrio, ciudad, trabajos anteriores, puestos, años de trabajo)
-from contrato import Contrato
+from moduloEmpleados.contrato import Contrato
 import utility.utility as utl
 class Empleado:
     # inicializa los legajos en 0
@@ -21,10 +21,10 @@ class Empleado:
     def registro(self):
         # Registrar todos los datos del empleado
         utl.cl()
-        self.nombre = input("Ingrese nombre del trabajador: ")
-        self.apellido = input("Ingrese apellido del trabajador: ")
-        self.ci = int(input("Ingrese cédula de indentidad del trabajador: "))
-        self.fecha_nac = utl.fecha_formato()
+        self.nombre = utl.pedir_str("Ingrese nombre del trabajador: ")
+        self.apellido = utl.pedir_str("Ingrese apellido del trabajador: ")
+        self.ci = utl.pedir_ent("Ingrese cédula de indentidad del trabajador: ")
+        self.fecha_nac = utl.fecha_formato("Ingrese la fecha de nacimiento(DD/MM/YYYY)")
         self.direc = input("Ingrese dirección del trabajador: ")
         self.barrio = input("Ingrese barrio del trabajador: ")
         self.ciudad = input("Ingrese ciudad del trabajador: ")

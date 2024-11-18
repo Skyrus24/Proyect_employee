@@ -3,6 +3,9 @@
 import datetime
 import os
 import inspect
+import re   
+
+
 
 
 ## función para limpiar pantalla
@@ -14,9 +17,9 @@ def cl():
 def wait():
     input("Presione una tecla para continuar...")
     
-def fecha_formato():
+def fecha_formato(mensaje):
     while True:
-        fecha = input("Ingrese la fecha en formato(DD/MM/YYYY): ")
+        fecha = input(mensaje)
         try:
         # comprueba si la fecha ingresada está en el formato correcto, de no ser así, reiniciará 
             fecha = datetime.datetime.strptime(fecha, "%d/%m/%Y").date()
@@ -46,7 +49,6 @@ def dias_del_mes():
     # Grupos de meses según su cantidad de días
     dias_31 = [1, 3, 5, 7, 8, 10, 12]  # Meses con 31 días
     dias_30 = [4, 6, 9, 11]            # Meses con 30 días
-
     while True:
         try:
             mes = int(input("Ingrese número del mes(Por ejemplo, 1 para enero): "))
@@ -61,6 +63,51 @@ def dias_del_mes():
         except ValueError:
             print("ERROR: Debes ingresar un NÚMERO para el mes.")
 
+## función para que solo se pueda ingresar enteros
+def pedir_ent(mensaje):
+    while True:
+        try:
+            integer = int(input(mensaje))
+        except ValueError:
+            print("ERROR: Debe ingresar un entero")
+        else:
+            return integer
 
+
+# Función que solo permita ingresar determinados tipos de caracteres
+def pedir_alpha(mensaje):
+    patron = r"^[a-zA-ZáéíóúüñàèùçĀāšžÇ'(),.\-/ ]+$"  # Definición del patrón
+    while True:
+        try:
+            special = input(mensaje)  # Solicitar entrada al usuario
+            if not re.match(patron, special):  # Verificar si no coincide con el patrón
+                raise ValueError("El dato ingresado solo puede contener letras y los siguientes caracteres especiales: ( ), . , - , /")
+            return special  # Si la entrada es válida, retornarla
+        except ValueError as e:
+            print(e)  # Mostrar el mensaje de error y volver a pedir la entrada
+        
+        
+# código original con errores
+'''def pedir_str(mensaje):
+    while True:
+        string = input(mensaje)
+        if string.isalpha():
+            return string
+        else:
+            print("ERROR: Debe ingresar solo carácteres válidos(No se permiten números).")'''
+            
+def pedir_str(mensaje):
+    while True:
+        string = input(mensaje)
+        # Usamos .isalpha() para verificar si solo tiene letras (sin números o caracteres especiales).
+        # Aceptamos letras con acentos y caracteres especiales como ñ, é, etc.
+        if all(c.isalpha() or c in "áéíóúüñàèùç" for c in string):  
+            return string
+        else:
+            print("ERROR: Debe ingresar solo caracteres válidos (No se permiten números ni caracteres especiales).")
+
+            
+            
+            
 if __name__ == "__main__":
     print(f"El día tiene {dias_del_mes()} días")
