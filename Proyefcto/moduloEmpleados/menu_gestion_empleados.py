@@ -21,8 +21,10 @@ def menu_gestion_empleados(empleados):
                 utl.wait()
             elif op == 3:
                 empleados.actualizar_emp()
+                utl.wait()
             elif op == 4:
                 empleados.eliminar_emp()
+                utl.wait()
             elif op == 5:
                 print("Saliendo del menú de empleados.")
                 break

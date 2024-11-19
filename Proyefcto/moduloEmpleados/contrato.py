@@ -14,7 +14,7 @@ class Contrato:
     
     def registro(self):
         # Asignar la fecha de firma del contrato
-        self.fecha = utl.fecha_formato("Ingrese la fecha del contrato(DD/MM/YYYY)")
+        self.fecha = utl.fecha_formato("Ingrese la fecha del contrato(DD/MM/YYYY): ")
         
         # Define un puesto para el contrato
         self.puesto()
@@ -26,7 +26,7 @@ class Contrato:
     def puesto(self):
         # Definir puesto del trabajador
         while True:
-            self.puesto = input("Ingrese el puesto del trabajador: ")
+            self.puesto = utl.pedir_str("Ingrese el puesto del trabajador: ")
             # Verificar que no esté vacío
             if self.puesto == "":
                 print("El puesto no puede ser vacio")

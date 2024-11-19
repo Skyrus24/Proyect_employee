@@ -15,7 +15,7 @@ def cl():
     
 # función para esperar a que se ingrese una tecla.
 def wait():
-    input("Presione una tecla para continuar...")
+    input("Presione ENTER para continuar...")
     
 def fecha_formato(mensaje):
     while True:
@@ -24,7 +24,7 @@ def fecha_formato(mensaje):
         # comprueba si la fecha ingresada está en el formato correcto, de no ser así, reiniciará 
             fecha = datetime.datetime.strptime(fecha, "%d/%m/%Y").date()
         except:
-            print("Formato de fecha incorrecto(Debe ingresar Día/Mes/año. Ejemplo: 24/08/2006)")
+            print("Formato de fecha incorrecto(Debe ingresar Día/Mes/año válidos. Ejemplo: 24/08/2006)")
         else:
             return fecha
         

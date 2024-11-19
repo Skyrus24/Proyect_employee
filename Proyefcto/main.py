@@ -1,5 +1,5 @@
 from moduloEmpleados.gestionEmpleados import Empleados
-from menu_gestion_empleados import menu_gestion_empleados
+from moduloEmpleados.menu_gestion_empleados import menu_gestion_empleados
 from menu_gestion_asistencia import Asistencia, menu_asistencia
 import utility.utility as utl
 

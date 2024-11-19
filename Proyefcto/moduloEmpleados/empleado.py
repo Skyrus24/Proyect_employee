@@ -1,6 +1,6 @@
 # Gestión de Empleados:Registro y actualización de información personal y laboral de los empleados. (nro Legajo, nombre, apellido, fecha nacimiento, dirección, barrio, ciudad, trabajos anteriores, puestos, años de empresa)
 from moduloEmpleados.contrato import Contrato
-from utility.utility import pedir_str
+from utility.utility import pedir_alpha
 import utility.utility as utl
 class Empleado:
     # inicializa los legajos en 0
@@ -45,12 +45,12 @@ class Empleado:
 
     # Registra trabajos anteriores del empleado
     def regist_trabajos(self):
-        empresa = input("Ingrese su antigua empresa (0 para salir): ")
+        empresa = utl.pedir_alpha("Ingrese su antigua empresa (0 para salir): ")
         if empresa == "0":
             empresa = ""
         else:
             puesto = utl.pedir_str("Ingrese su antiguo puesto: ")
-            año = input("Ingrese sus años de empresa: ")
+            año = utl.pedir_ent("Ingrese sus años de empresa: ")
             trabajos_ant = [empresa,puesto,año]
             self.trabajos_anteriores.append(trabajos_ant)
             self.regist_trabajos()
@@ -73,37 +73,36 @@ class Empleado:
 
             if opcion == "1":
                 utl.cl()
-                self.nombre = input("Ingrese el nuevo nombre: ")
+                self.nombre = utl.pedir_str("Ingrese el nuevo nombre: ")
                 print("¡Dato actualizado con éxito!")
                 utl.wait()
             elif opcion == "2":
                 utl.cl()
-                self.apellido = input("Ingrese el nuevo apellido: ")
+                self.apellido = utl.pedir_str("Ingrese el nuevo apellido: ")
                 print("¡Dato actualizado con éxito!")
                 utl.wait()
             elif opcion == "3":
                 utl.cl()
-                self.fecha_nac = utl.fecha_formato()
+                self.fecha_nac = utl.fecha_formato("Ingrese la nueva fecha de nacimiento: ")
                 print("¡Dato actualizado con éxito!")
                 utl.wait()
             elif opcion == "4":
                 utl.cl()
-                self.direc = input("Ingrese la nueva dirección: ")
+                self.direc = utl.pedir_alpha("Ingrese la nueva dirección: ")
                 print("¡Dato actualizado con éxito!")
                 utl.wait()
             elif opcion == "5":
                 utl.cl()
-                self.barrio = input("Ingrese el nuevo barrio: ")
+                self.barrio = utl.pedir_alpha("Ingrese el nuevo barrio: ")
                 print("¡Dato actualizado con éxito!")
-                utl.wait()
             elif opcion == "6":
                 utl.cl()
-                self.ciudad = input("Ingrese la nueva ciudad: ")
+                self.ciudad = utl.pedir_alpha("Ingrese la nueva ciudad: ")
                 print("¡Dato actualizado con éxito!")
                 utl.wait()
             elif opcion == "7":
                 utl.cl()
-                self.ci = int(input("Ingrese la nueva cédula de identidad: "))
+                self.ci = utl.pedir_ent("Ingrese la nueva cédula de identidad: ")
                 print("¡Dato actualizado con éxito!")
                 utl.wait()
             elif opcion == "0":
@@ -119,16 +118,18 @@ class Empleado:
 
     # Registra para imprimir los datos cada que se requiera
     def imprimir_datos(self):
-        print(f"Nombre(s): {self.nombre}\n"
+        utl.cl()
+        print("Datos del empleado: \n"
+              f"Nombre(s): {self.nombre}\n"
               f"Apellido(s): {self.apellido}\n"
               f"Fecha de nacimiento: {self.fecha_nac}\n" 
               f"Dirección:{self.direc}\n"
               f"Barrio: {self.barrio}\n"
-              f"Ciudad:{self.ciudad}\n")
+              f"Ciudad:{self.ciudad}")
         for empresa in self.trabajos_anteriores:
             print(f"Trabajo anterior: {empresa[0]}\n"
                   f"Puesto: {empresa[1]}\n"
-                  f"Años de empresa: {empresa[2]}")
+                  f"Años de empresa: {empresa[2]}\n")
         
 if __name__  == "__main__":
     emp = Empleado()

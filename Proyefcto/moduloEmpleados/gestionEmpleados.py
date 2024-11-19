@@ -14,28 +14,23 @@ class Empleados:
             print("ERROR: La nómina está vacía")
         else:  
             for emp in self.employeeslist:
-                print(emp)
+                emp.imprimir_datos()
         
     def actualizar_emp(self):
         if self.employeeslist == []:
             print("La nómina de empleados está vacía.")
         else:
-            while True:
-                try:
-                    found = False
-                    while found == False:
-                        utl.cl()
-                        ci = int(input("Ingrese CI del empleado a actualizar: "))
-                        for emp in self.employeeslist:
-                            if emp.ci == ci:
-                                emp.actualizar_datos()
-                                found = True
-                        if found == False:
-                            print("Empleado no encontrado.")
-                            
-                except ValueError:
-                    print("ERROR: Debe ingresar un CI válido")
-                    
+            found = False
+            utl.cl()
+            print("Actualización de datos del empleado.")
+            ci = utl.pedir_ent("Ingrese CI del empleado a actualizar: ")
+            for emp in self.employeeslist:
+                if emp.ci == ci:
+                    emp.actualizar_datos()
+                    found = True
+            if found == False:
+                print("Empleado no encontrado.")
+            
     def eliminar_emp(self):
         if self.employeeslist == []:
             print("La nómina de empleados está vacía")
