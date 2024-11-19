@@ -33,6 +33,14 @@
         "documentation": {}
     },
     {
+        "label": "pedir_str",
+        "importPath": "utility.utility",
+        "description": "utility.utility",
+        "isExtraImport": true,
+        "detail": "utility.utility",
+        "documentation": {}
+    },
+    {
         "label": "Contrato",
         "importPath": "moduloEmpleados.contrato",
         "description": "moduloEmpleados.contrato",
