@@ -101,7 +101,7 @@ def pedir_str(mensaje):
         string = input(mensaje)
         # Usamos .isalpha() para verificar si solo tiene letras (sin números o caracteres especiales).
         # Aceptamos letras con acentos y caracteres especiales como ñ, é, etc.
-        if all(c.isalpha() or c in "áéíóúüñàèùç" for c in string):  
+        if all(c.isalpha() or c in " áéíóúüñàèùç" for c in string):  
             return string
         else:
             print("ERROR: Debe ingresar solo caracteres válidos (No se permiten números ni caracteres especiales).")

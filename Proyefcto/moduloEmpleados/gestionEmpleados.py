@@ -28,32 +28,27 @@ class Empleados:
                 if emp.ci == ci:
                     emp.actualizar_datos()
                     found = True
-            if found == False:
+            if not found:
                 print("Empleado no encontrado.")
             
     def eliminar_emp(self):
         if self.employeeslist == []:
             print("La nómina de empleados está vacía")
         else:
-            while True:
-                try:
-                    found = False
-                    while found != True:
-                        utl.cl()
-                        ci = int(input("Ingrese CI del empleado a eliminar: "))
-                        index = 0
-                        for emp in self.employeeslist:
-                            if emp.ci == ci:
-                                self.employeeslist.pop(index)       
-                                found = True
-                                return("Empleado eliminado")
-                            index += 1
+            found = False
+            utl.cl()
+            print("ELiminar un empleado.")
+            ci = utl.pedir_ent("Ingrese CI del empleado a eliminar: ")
+            index = 0
+            for emp in self.employeeslist:
+                if emp.ci == ci:
+                    self.employeeslist.pop(index)       
+                    found = True
+                    print("Empleado eliminado")
+                index += 1
 
-                        if not found:
-                            print("Empleado no encontrado")
-                except ValueError:
-                    print("ERROR: Debe ingresar un valor válido")
-
+            if not found:
+                print("Empleado no encontrado")
                             
                         
                              

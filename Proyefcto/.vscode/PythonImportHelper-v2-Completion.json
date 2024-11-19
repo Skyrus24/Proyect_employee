@@ -433,7 +433,7 @@
         "kind": 2,
         "importPath": "utility.utility",
         "description": "utility.utility",
-        "peekOfCode": "def pedir_str(mensaje):\n    while True:\n        string = input(mensaje)\n        # Usamos .isalpha() para verificar si solo tiene letras (sin números o caracteres especiales).\n        # Aceptamos letras con acentos y caracteres especiales como ñ, é, etc.\n        if all(c.isalpha() or c in \"áéíóúüñàèùç\" for c in string):  \n            return string\n        else:\n            print(\"ERROR: Debe ingresar solo caracteres válidos (No se permiten números ni caracteres especiales).\")\nif __name__ == \"__main__\":",
+        "peekOfCode": "def pedir_str(mensaje):\n    while True:\n        string = input(mensaje)\n        # Usamos .isalpha() para verificar si solo tiene letras (sin números o caracteres especiales).\n        # Aceptamos letras con acentos y caracteres especiales como ñ, é, etc.\n        if all(c.isalpha() or c in \" áéíóúüñàèùç\" for c in string):  \n            return string\n        else:\n            print(\"ERROR: Debe ingresar solo caracteres válidos (No se permiten números ni caracteres especiales).\")\nif __name__ == \"__main__\":",
         "detail": "utility.utility",
         "documentation": {}
     },

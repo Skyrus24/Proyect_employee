@@ -73,43 +73,42 @@ class Empleado:
 
             if opcion == "1":
                 utl.cl()
+                print(f"Nombre actual: {self.nombre}.")
                 self.nombre = utl.pedir_str("Ingrese el nuevo nombre: ")
                 print("¡Dato actualizado con éxito!")
-                utl.wait()
             elif opcion == "2":
                 utl.cl()
+                print(f"Apellido actual: {self.apellido}.")
                 self.apellido = utl.pedir_str("Ingrese el nuevo apellido: ")
                 print("¡Dato actualizado con éxito!")
-                utl.wait()
             elif opcion == "3":
                 utl.cl()
+                print(f"Fecha actual: {self.fecha_nac}.")
                 self.fecha_nac = utl.fecha_formato("Ingrese la nueva fecha de nacimiento: ")
                 print("¡Dato actualizado con éxito!")
-                utl.wait()
             elif opcion == "4":
                 utl.cl()
+                print(f"Dirección actual: {self.direc}.")
                 self.direc = utl.pedir_alpha("Ingrese la nueva dirección: ")
                 print("¡Dato actualizado con éxito!")
-                utl.wait()
             elif opcion == "5":
                 utl.cl()
+                print(f"Barrio actual: {self.barrio}.")     
                 self.barrio = utl.pedir_alpha("Ingrese el nuevo barrio: ")
                 print("¡Dato actualizado con éxito!")
             elif opcion == "6":
                 utl.cl()
+                print(f"Ciudad actual: {self.ciudad}.")
                 self.ciudad = utl.pedir_alpha("Ingrese la nueva ciudad: ")
                 print("¡Dato actualizado con éxito!")
-                utl.wait()
             elif opcion == "7":
                 utl.cl()
+                print(f"Cédula actual: {self.ci}.")
                 self.ci = utl.pedir_ent("Ingrese la nueva cédula de identidad: ")
                 print("¡Dato actualizado con éxito!")
-                utl.wait()
             elif opcion == "0":
                 print("Saliendo del menú de actualización.")
-                utl.wait()
                 break
-                return False
             else:
                 print("Opción inválida. Intente de nuevo.")
                 
@@ -125,7 +124,8 @@ class Empleado:
               f"Fecha de nacimiento: {self.fecha_nac}\n" 
               f"Dirección:{self.direc}\n"
               f"Barrio: {self.barrio}\n"
-              f"Ciudad:{self.ciudad}")
+              f"Ciudad:{self.ciudad}\n"
+              f"Cédula de identidad:{self.ci}")
         for empresa in self.trabajos_anteriores:
             print(f"Trabajo anterior: {empresa[0]}\n"
                   f"Puesto: {empresa[1]}\n"

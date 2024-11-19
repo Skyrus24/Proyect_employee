@@ -32,8 +32,6 @@ class Contrato:
                 print("El puesto no puede ser vacio")
             else:
                 break
-
-
     
     
     def tipo_contrato(self):
@@ -41,18 +39,18 @@ class Contrato:
             try:
                 print("Ingrese su tipo de contrato:\n1- Fijo\n2- Temporal\n3- Por horas")
                 op = int(input("Ingrese su opción: "))
-                # En base a esta opción, se calculará las asistencias y el sueldo.
+                # En base a esta opción, se calculará las asistencias y el salario.
                 if op == 1:
                     self.tipo_contrato = "Contrato Fijo"
-                    self.sueldo(op)
+                    self.def_sueldo(op)
                     break
                 elif op == 2:
                     self.tipo_contrato = "Contrato Temporal"
-                    self.sueldo(op)
+                    self.def_sueldo(op)
                     break
                 elif op == 3:
                     self.tipo_contrato = "Por horas"
-                    self.sueldo(op)
+                    self.def_sueldo(op)
                     break
                 else:
                     print("ERROR: Valor ingresado inválido")
@@ -60,23 +58,29 @@ class Contrato:
                 print("Ingrese un valor correcto de tipo de contrato")
           
         
-    def sueldo(self, op):
-        # Establecer una variable del sueldo mínimo actual
+    def def_sueldo(self, op):
+        # Establecer una variable del salario mínimo actual
         sueld_min = 2798309
         sueld_min_horas = sueld_min / 192 # Se divide ya que se trabajan 192 horas en promedio por mes.
         while True:
             try:
                 if op == 1 or op == 2:
-                    self.sueldo = int(input("Ingrese el sueldo del trabajador: "))
-                    # Verificar que el sueldo ingresado no sea menor al sueldo mínimo
-                    if self.sueldo < sueld_min:
-                        print(f"ERROR: El sueldo no puede ser menor al sueldo minimo({sueld_min}).")
+                    self.salario = int(input("Ingrese el salario del trabajador: "))
+                    # Verificar que el salario ingresado no sea menor al salario mínimo
+                    if self.salario < sueld_min:
+                        print(f"ERROR: El salario no puede ser menor al salario minimo({sueld_min}).")
                     else:
                         break
                 else:
-                    sueld_horas = int(input("Ingrese el sueldo por horas del trabajador."))
+                    sueld_horas = int(input("Ingrese el salario por horas del trabajador."))
                     if sueld_horas < sueld_min_horas:
-                        print(f"ERROR: El sueldo por horas no debe ser menor a {sueld_min_horas}")
+                        print(f"ERROR: El salario por horas no debe ser menor a {sueld_min_horas}")
             except ValueError:
-                print("ERROR: Debe ingresar solo el monto del sueldo.")
+                print("ERROR: Debe ingresar solo el monto del salario.")
         
+    def imprimir_cont(self):
+        print(f"La fecha de inicio del contrato es: {self.fecha}\n"
+              f"El número del legajo es: {self.idlegajo}\n"
+              f"El puesto es: {self.puesto}\n"
+              f"El salario es: {self.salario}\n"
+              f"El tipo de contrato es: {self.tipo_contrato}\n")

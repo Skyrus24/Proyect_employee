@@ -28,8 +28,10 @@ def menu_principal():
                 break
             else:
                 print("Opción inválida.")
+                utl.wait()
         except ValueError:
             print("Ingrese una opción numérica.")
+            utl.wait()
 
 if __name__ == "__main__":
     menu_principal()
