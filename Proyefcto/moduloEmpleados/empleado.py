@@ -1,5 +1,6 @@
-# Gestión de Empleados:Registro y actualización de información personal y laboral de los empleados. (nro Legajo, nombre, apellido, fecha nacimiento, dirección, barrio, ciudad, trabajos anteriores, puestos, años de trabajo)
+# Gestión de Empleados:Registro y actualización de información personal y laboral de los empleados. (nro Legajo, nombre, apellido, fecha nacimiento, dirección, barrio, ciudad, trabajos anteriores, puestos, años de empresa)
 from moduloEmpleados.contrato import Contrato
+from utility.utility import pedir_str
 import utility.utility as utl
 class Empleado:
     # inicializa los legajos en 0
@@ -21,13 +22,14 @@ class Empleado:
     def registro(self):
         # Registrar todos los datos del empleado
         utl.cl()
+        print("Registro del trabajador.")
         self.nombre = utl.pedir_str("Ingrese nombre del trabajador: ")
         self.apellido = utl.pedir_str("Ingrese apellido del trabajador: ")
-        self.ci = utl.pedir_ent("Ingrese cédula de indentidad del trabajador: ")
-        self.fecha_nac = utl.fecha_formato("Ingrese la fecha de nacimiento(DD/MM/YYYY)")
-        self.direc = input("Ingrese dirección del trabajador: ")
-        self.barrio = input("Ingrese barrio del trabajador: ")
-        self.ciudad = input("Ingrese ciudad del trabajador: ")
+        self.ci = utl.pedir_ent("Ingrese cédula de identidad del trabajador: ")
+        self.fecha_nac = utl.fecha_formato("Ingrese la fecha de nacimiento(DD/MM/YYYY): ")
+        self.direc = utl.pedir_alpha("Ingrese dirección del trabajador: ")
+        self.barrio = utl.pedir_alpha("Ingrese barrio del trabajador: ")
+        self.ciudad = utl.pedir_alpha("Ingrese ciudad del trabajador: ")
         
          # Asigna un número de legajo y automáticamente suma +1
         self.idlegajo = Empleado.legajo
@@ -43,13 +45,13 @@ class Empleado:
 
     # Registra trabajos anteriores del empleado
     def regist_trabajos(self):
-        trabajo = input("Ingrese su antiguo trabajo (0 para salir): ")
-        if trabajo == "0":
-            trabajo = ""
+        empresa = input("Ingrese su antigua empresa (0 para salir): ")
+        if empresa == "0":
+            empresa = ""
         else:
-            puesto = input("Ingrese su antiguo puesto: ")
-            año = input("Ingrese sus años de trabajo: ")
-            trabajos_ant = [trabajo,puesto,año]
+            puesto = utl.pedir_str("Ingrese su antiguo puesto: ")
+            año = input("Ingrese sus años de empresa: ")
+            trabajos_ant = [empresa,puesto,año]
             self.trabajos_anteriores.append(trabajos_ant)
             self.regist_trabajos()
 
@@ -123,10 +125,10 @@ class Empleado:
               f"Dirección:{self.direc}\n"
               f"Barrio: {self.barrio}\n"
               f"Ciudad:{self.ciudad}\n")
-        for trabajo in self.trabajos_anteriores:
-            print(f"Trabajo anterior: {trabajo[0]}\n"
-                  f"Puesto: {trabajo[1]}\n"
-                  f"Años de trabajo: {trabajo[2]}")
+        for empresa in self.trabajos_anteriores:
+            print(f"Trabajo anterior: {empresa[0]}\n"
+                  f"Puesto: {empresa[1]}\n"
+                  f"Años de empresa: {empresa[2]}")
         
 if __name__  == "__main__":
     emp = Empleado()

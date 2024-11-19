@@ -272,7 +272,7 @@
         "kind": 2,
         "importPath": "utility.utility",
         "description": "utility.utility",
-        "peekOfCode": "def pedir_alpha(mensaje):\n    patron = r\"^[a-zA-ZáéíóúüñàèùçĀāšžÇ'(),.\\-/ ]+$\"  # Definición del patrón\n    while True:\n        try:\n            special = input(mensaje)  # Solicitar entrada al usuario\n            if not re.match(patron, special):  # Verificar si no coincide con el patrón\n                raise ValueError(\"El dato ingresado solo puede contener letras y los siguientes caracteres especiales: ( ), . , - , /\")\n            return special  # Si la entrada es válida, retornarla\n        except ValueError as e:\n            print(e)  # Mostrar el mensaje de error y volver a pedir la entrada",
+        "peekOfCode": "def pedir_alpha(mensaje):\n    patron = r\"^[a-zA-Z0-9áéíóúüñàèùçĀāšžÇ'(),.\\-/ ]+$\"  # Definición del patrón\n    while True:\n        try:\n            special = input(mensaje)  # Solicitar entrada al usuario\n            if not re.match(patron, special):  # Verificar si no coincide con el patrón\n                raise ValueError(\"El dato ingresado solo puede contener letras y los siguientes caracteres especiales: ( ), . , - , /\")\n            return special  # Si la entrada es válida, retornarla\n        except ValueError as e:\n            print(e)  # Mostrar el mensaje de error y volver a pedir la entrada",
         "detail": "utility.utility",
         "documentation": {}
     },

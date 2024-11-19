@@ -76,7 +76,7 @@ def pedir_ent(mensaje):
 
 # Función que solo permita ingresar determinados tipos de caracteres
 def pedir_alpha(mensaje):
-    patron = r"^[a-zA-ZáéíóúüñàèùçĀāšžÇ'(),.\-/ ]+$"  # Definición del patrón
+    patron = r"^[a-zA-Z0-9áéíóúüñàèùçĀāšžÇ'(),.\-/ ]+$"  # Definición del patrón
     while True:
         try:
             special = input(mensaje)  # Solicitar entrada al usuario
