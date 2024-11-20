@@ -1,4 +1,6 @@
-class Asistencia:
+import utility.utility as utl
+
+'''class Asistencia:
     def __init__(self, empleados):
         self.empleados = empleados
         self.asistencia = {}
@@ -19,8 +21,10 @@ class Asistencia:
             print(f"Asistencia registrada para {empleado.nombre}.")
         else:
             print("Empleado no encontrado.")
+'''
 
 def menu_asistencia(asistencia):
+    dayofmonth = utl.dias_del_mes()
     while True:
         print("\nMenú de Gestión de Asistencia")
         print("1- Inicializar Asistencia")
@@ -31,7 +35,7 @@ def menu_asistencia(asistencia):
         try:
             op = int(input("Ingrese su opción: "))
             if op == 1:
-                asistencia.inicializar_asistencia()
+                asistencia.inicializar_asistencias(dayofmonth)
             elif op == 2:
                 asistencia.registrar_asistencia()
             elif op == 3:

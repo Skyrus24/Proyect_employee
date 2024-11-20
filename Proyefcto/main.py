@@ -1,8 +1,10 @@
 from MainSalarios import menuprincipall
 from moduloEmpleados.gestionEmpleados import Empleados
 from moduloEmpleados.menu_gestion_empleados import menu_gestion_empleados
-from menu_gestion_asistencia import Asistencia, menu_asistencia
+from moduloAsistencia.asistencia import Asistencia
+from menu_gestion_asistencia import menu_asistencia
 import utility.utility as utl
+
 
 # Crear una instancia única del objeto Empleados
 gestion_empleados = Empleados()

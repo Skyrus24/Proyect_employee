@@ -73,78 +73,6 @@
         "documentation": {}
     },
     {
-        "label": "SistemaNomina",
-        "importPath": "SistemadeNominas",
-        "description": "SistemadeNominas",
-        "isExtraImport": true,
-        "detail": "SistemadeNominas",
-        "documentation": {}
-    },
-    {
-        "label": "generar_informe_empleado",
-        "importPath": "InformePagos",
-        "description": "InformePagos",
-        "isExtraImport": true,
-        "detail": "InformePagos",
-        "documentation": {}
-    },
-    {
-        "label": "generar_informe_empleado",
-        "importPath": "InformePagos",
-        "description": "InformePagos",
-        "isExtraImport": true,
-        "detail": "InformePagos",
-        "documentation": {}
-    },
-    {
-        "label": "generar_informe_empleado",
-        "importPath": "InformePagos",
-        "description": "InformePagos",
-        "isExtraImport": true,
-        "detail": "InformePagos",
-        "documentation": {}
-    },
-    {
-        "label": "generar_informe_detallado_recursos_humanos",
-        "importPath": "RecursosHumanos",
-        "description": "RecursosHumanos",
-        "isExtraImport": true,
-        "detail": "RecursosHumanos",
-        "documentation": {}
-    },
-    {
-        "label": "generar_informe_detallado_recursos_humanos",
-        "importPath": "RecursosHumanos",
-        "description": "RecursosHumanos",
-        "isExtraImport": true,
-        "detail": "RecursosHumanos",
-        "documentation": {}
-    },
-    {
-        "label": "Empleado",
-        "importPath": "empleadoNomina",
-        "description": "empleadoNomina",
-        "isExtraImport": true,
-        "detail": "empleadoNomina",
-        "documentation": {}
-    },
-    {
-        "label": "Empleado",
-        "importPath": "empleadoNomina",
-        "description": "empleadoNomina",
-        "isExtraImport": true,
-        "detail": "empleadoNomina",
-        "documentation": {}
-    },
-    {
-        "label": "calcular_nomina_empleado",
-        "importPath": "NominadePagos",
-        "description": "NominadePagos",
-        "isExtraImport": true,
-        "detail": "NominadePagos",
-        "documentation": {}
-    },
-    {
         "label": "datetime",
         "kind": 6,
         "isExtraImport": true,
@@ -189,6 +117,14 @@
         "documentation": {}
     },
     {
+        "label": "menuprincipall",
+        "importPath": "MainSalarios",
+        "description": "MainSalarios",
+        "isExtraImport": true,
+        "detail": "MainSalarios",
+        "documentation": {}
+    },
+    {
         "label": "menu_gestion_empleados",
         "importPath": "moduloEmpleados.menu_gestion_empleados",
         "description": "moduloEmpleados.menu_gestion_empleados",
@@ -198,10 +134,10 @@
     },
     {
         "label": "Asistencia",
-        "importPath": "menu_gestion_asistencia",
-        "description": "menu_gestion_asistencia",
+        "importPath": "moduloAsistencia.asistencia",
+        "description": "moduloAsistencia.asistencia",
         "isExtraImport": true,
-        "detail": "menu_gestion_asistencia",
+        "detail": "moduloAsistencia.asistencia",
         "documentation": {}
     },
     {
@@ -213,11 +149,83 @@
         "documentation": {}
     },
     {
+        "label": "SistemaNomina",
+        "importPath": "SistemadeNominas",
+        "description": "SistemadeNominas",
+        "isExtraImport": true,
+        "detail": "SistemadeNominas",
+        "documentation": {}
+    },
+    {
+        "label": "generar_informe_empleado",
+        "importPath": "informe_empleado",
+        "description": "informe_empleado",
+        "isExtraImport": true,
+        "detail": "informe_empleado",
+        "documentation": {}
+    },
+    {
+        "label": "generar_informe_empleado",
+        "importPath": "informe_empleado",
+        "description": "informe_empleado",
+        "isExtraImport": true,
+        "detail": "informe_empleado",
+        "documentation": {}
+    },
+    {
+        "label": "generar_informe_empleado",
+        "importPath": "informe_empleado",
+        "description": "informe_empleado",
+        "isExtraImport": true,
+        "detail": "informe_empleado",
+        "documentation": {}
+    },
+    {
+        "label": "generar_informe_detallado_recursos_humanos",
+        "importPath": "RecursosHumanos",
+        "description": "RecursosHumanos",
+        "isExtraImport": true,
+        "detail": "RecursosHumanos",
+        "documentation": {}
+    },
+    {
+        "label": "generar_informe_detallado_recursos_humanos",
+        "importPath": "RecursosHumanos",
+        "description": "RecursosHumanos",
+        "isExtraImport": true,
+        "detail": "RecursosHumanos",
+        "documentation": {}
+    },
+    {
+        "label": "Empleado",
+        "importPath": "empleadoNomina",
+        "description": "empleadoNomina",
+        "isExtraImport": true,
+        "detail": "empleadoNomina",
+        "documentation": {}
+    },
+    {
+        "label": "Empleado",
+        "importPath": "empleadoNomina",
+        "description": "empleadoNomina",
+        "isExtraImport": true,
+        "detail": "empleadoNomina",
+        "documentation": {}
+    },
+    {
+        "label": "calcular_nomina_empleado",
+        "importPath": "NominadePagos",
+        "description": "NominadePagos",
+        "isExtraImport": true,
+        "detail": "NominadePagos",
+        "documentation": {}
+    },
+    {
         "label": "Asistencia",
         "kind": 6,
         "importPath": "moduloAsistencia.asistencia",
         "description": "moduloAsistencia.asistencia",
-        "peekOfCode": "class Asistencia:\n    def __init__(self, empleados: Empleados):\n        self.empleados = empleados\n        self.asistencias = {}  # Estructura: {idlegajo: [estado_del_dia, ...]}\n        self.razones = {}  # Estructura: {idlegajo: {día: razón}}\n    def inicializar_asistencias(self, dias_mes: int):\n        \"\"\"\n        Inicializa las asistencias de todos los empleados a 0 (ausente) para los días del mes.\n        \"\"\"\n        for empleado in self.empleados.employeeslist:",
+        "peekOfCode": "class Asistencia:\n    def __init__(self, empleados: Empleados):\n        self.empleados = empleados\n        self.asistencias = {}  # Estructura: {idlegajo: [estado_del_dia, ...]}\n        self.razones = {}  # Estructura: {idlegajo: {día: razón}}\n    def inicializar_asistencias(self, dias_mes: int):\n        \"\"\"\n        Inicializa las asistencias de todos los empleados a 0 (ausente) para los días del mes.\n        \"\"\"\n        if self.empleados.employeeslist == []:",
         "detail": "moduloAsistencia.asistencia",
         "documentation": {}
     },
@@ -235,7 +243,7 @@
         "kind": 6,
         "importPath": "moduloEmpleados.empleado",
         "description": "moduloEmpleados.empleado",
-        "peekOfCode": "class Empleado:\n    # inicializa los legajos en 0\n    legajo = 1\n    # Construye los atributos\n    def __init__(self):\n        # Inicializa los datos del empleado\n        self.nombre = str\n        self.apellido = str\n        self.fecha_nac = None\n        self.direc = str",
+        "peekOfCode": "class Empleado:\n    # inicializa los legajos en 1\n    legajo = 1\n    # Construye los atributos\n    def __init__(self):\n        # Inicializa los datos del empleado\n        self.nombre = str\n        self.apellido = str\n        self.fecha_nac = None\n        self.direc = str",
         "detail": "moduloEmpleados.empleado",
         "documentation": {}
     },
@@ -255,69 +263,6 @@
         "description": "moduloEmpleados.menu_gestion_empleados",
         "peekOfCode": "def menu_gestion_empleados(empleados):\n    while True:\n        utl.cl() \n        print(\"\\nMenú de Gestión de Empleados\")\n        print(\"1- Agregar Empleado\")\n        print(\"2- Mostrar Empleados\")\n        print(\"3- Actualizar datos de un empleado\")\n        print(\"4- Eliminar un empleado\")\n        print(\"5- Salir\")\n        try:",
         "detail": "moduloEmpleados.menu_gestion_empleados",
-        "documentation": {}
-    },
-    {
-        "label": "Empleado",
-        "kind": 6,
-        "importPath": "ModulosNomina.empleadoNomina",
-        "description": "ModulosNomina.empleadoNomina",
-        "peekOfCode": "class Empleado:\n    def __init__(self, ci_sal, nombre_sal, salarioPorHora_sal, horasTrabajadas_sal, productividad_sal, porcentajeComision_sal, horasExtras_sal, horasNocturnas_sal, bonoAsistencia_sal, minimoHorasAsistencia_sal, seguroSocial_sal, prestamos_sal, adelantos_sal):\n        # Constructor de la clase Empleado\n        self.ci_sal = ci_sal\n        self.nombre_sal = nombre_sal\n        self.salarioPorHora_sal = salarioPorHora_sal\n        self.horasTrabajadas_sal = horasTrabajadas_sal\n        self.productividad_sal = productividad_sal\n        self.porcentajeComision_sal = porcentajeComision_sal\n        self.horasExtras_sal = horasExtras_sal",
-        "detail": "ModulosNomina.empleadoNomina",
-        "documentation": {}
-    },
-    {
-        "label": "generar_informe_empleado",
-        "kind": 2,
-        "importPath": "ModulosNomina.informe_empleado",
-        "description": "ModulosNomina.informe_empleado",
-        "peekOfCode": "def generar_informe_empleado(empleado_sal):\n    #esta funcion es la que usaremos en el main y genera un informe detallado para un empleado\n    datos_sal = empleado_sal.calcular_salario()\n    informe_sal = f\"\"\"\n    Recibo Detallado para el Empleado: {datos_sal['nombre_sal']}\n    ---------------------------------------------------------\n    Salario Bruto Total: {datos_sal['salarioBrutoTotal_sal']}\n    Comisiones: {datos_sal['comisiones_sal']}\n    Bono de Asistencia: {datos_sal['bonoAsistencia_sal']}\n    Pago por horas Extras: {datos_sal['horasExtras_sal']}",
-        "detail": "ModulosNomina.informe_empleado",
-        "documentation": {}
-    },
-    {
-        "label": "menu_principal",
-        "kind": 2,
-        "importPath": "ModulosNomina.MainSalarios",
-        "description": "ModulosNomina.MainSalarios",
-        "peekOfCode": "def menu_principal():\n    sistema_sal = SistemaNomina()\n#Ingreso al usuario a un bucle infinito\n    while True:\n        print(\"\\n=== Sistema de Nómina ===\")\n        print(\"1. Agregar nuevo empleado\")\n        print(\"2. Buscar y modificar datos de un empleado\")\n        print(\"3. Mostrar informe detallado del empleado\")\n        print(\"4. Mostrar informe de Recursos Humanos (IPS)\")\n        print(\"5. Salir\")",
-        "detail": "ModulosNomina.MainSalarios",
-        "documentation": {}
-    },
-    {
-        "label": "modificar_datos_empleado",
-        "kind": 2,
-        "importPath": "ModulosNomina.MainSalarios",
-        "description": "ModulosNomina.MainSalarios",
-        "peekOfCode": "def modificar_datos_empleado(empleado_sal):\n    #esta funcion nos permite modificar los datos de un empleado existente,\n    #mantenemos el valor si el usuario no escribe nada\n    print(f\"\\n=== Modificar datos de {empleado_sal.nombre_sal} ===\")\n    try:\n        empleado_sal.nombre_sal = input(f\"Nombre [{empleado_sal.nombre_sal}]: \") or empleado_sal.nombre_sal\n        empleado_sal.salarioPorHora_sal = int(input(f\"Salario por hora [{empleado_sal.salarioPorHora_sal}]: \") or empleado_sal.salarioPorHora_sal)\n        empleado_sal.horasTrabajadas_sal = int(input(f\"Horas trabajadas [{empleado_sal.horasTrabajadas_sal}]: \") or empleado_sal.horasTrabajadas_sal)\n        empleado_sal.productividad_sal = int(input(f\"Productividad/ventas del mes [{empleado_sal.productividad_sal}]: \") or empleado_sal.productividad_sal)\n        empleado_sal.porcentajeComision_sal = float(input(f\"Porcentaje de comisión (en %) [{empleado_sal.porcentajeComision_sal * 100}]: \") or (empleado_sal.porcentajeComision_sal * 100)) / 100",
-        "detail": "ModulosNomina.MainSalarios",
-        "documentation": {}
-    },
-    {
-        "label": "calcular_nomina_empleado",
-        "kind": 2,
-        "importPath": "ModulosNomina.NominadePagos",
-        "description": "ModulosNomina.NominadePagos",
-        "peekOfCode": "def calcular_nomina_empleado(ci_sal, nombre_sal, salarioPorHora_sal, horasTrabajadas_sal, productividad_sal, porcentajeComision_sal,\n                             horasExtras_sal, horasNocturnas_sal, bonoAsistencia_sal, minimoHorasAsistencia_sal,\n                             seguroSocial_sal, prestamos_sal, adelantos_sal):\n    #Calculamos  la nómina de un empleado y retornamos los resultados\n    empleado_sal = Empleado(\n        ci_sal, nombre_sal, salarioPorHora_sal, horasTrabajadas_sal, productividad_sal,\n        porcentajeComision_sal, horasExtras_sal, horasNocturnas_sal, bonoAsistencia_sal,\n        minimoHorasAsistencia_sal, seguroSocial_sal, prestamos_sal, adelantos_sal\n    )\n    return empleado_sal.calcular_salario()",
-        "detail": "ModulosNomina.NominadePagos",
-        "documentation": {}
-    },
-    {
-        "label": "generar_informe_detallado_recursos_humanos",
-        "kind": 2,
-        "importPath": "ModulosNomina.RecursosHumanos",
-        "description": "ModulosNomina.RecursosHumanos",
-        "peekOfCode": "def generar_informe_detallado_recursos_humanos(empleado_sal):\n# esta funcion es la que genera un informe detallado para el departamento de recursos humanos\n    # Información del empleado\n    nombre_sal = empleado_sal.nombre_sal\n    ci_sal = empleado_sal.ci_sal\n    horas_trabajadas_sal = empleado_sal.horasTrabajadas_sal\n    # Descuentos\n    seguro_social_sal = empleado_sal.seguroSocial_sal\n    prestamos_sal = empleado_sal.prestamos_sal\n    adelantos_sal = empleado_sal.adelantos_sal",
-        "detail": "ModulosNomina.RecursosHumanos",
-        "documentation": {}
-    },
-    {
-        "label": "SistemaNomina",
-        "kind": 6,
-        "importPath": "ModulosNomina.SistemadeNominas",
-        "description": "ModulosNomina.SistemadeNominas",
-        "peekOfCode": "class SistemaNomina:\n    def __init__(self):\n        self.empleados_sal = []\n    def agregar_empleado(self, empleado_sal):\n        #Agrega un empleado a la lista, con append lo llevamos al final\n        self.empleados_sal.append(empleado_sal)\n    def buscar_por_ci(self, ci_sal):\n        #Con el atributo ci buscamos el empleado por numero de ci\n        for empleado_sal in self.empleados_sal:\n            if empleado_sal.ci_sal == ci_sal:",
-        "detail": "ModulosNomina.SistemadeNominas",
         "documentation": {}
     },
     {
@@ -438,12 +383,21 @@
         "documentation": {}
     },
     {
-        "label": "CalculoNomina",
+        "label": "Empleado",
         "kind": 6,
-        "importPath": "Calculo de Nomina",
-        "description": "Calculo de Nomina",
-        "peekOfCode": "class CalculoNomina:\n    def calcular_salario():\n    # Primeramente voy a pedir al usuario todos los datos necesarios para\n    # un calculo de nomina dirigido a individuo, con la posibilidad de cambiar cada aspecto variablle del salario\n    # Como el sistema se basa en calcular el salario por horas trabajadas, vamos a pedir esos datos primero en primera instancia\n      salarioPorHora = int(input(\"Ingrese el salario fijo por hora: \"))\n      horasTrabajadas = int(input(\"Ingrese las horas trabajadas: \"))\n          ## abel: yo solicitaré estos datos previamente, por lo tanto te los enviaré después\n    # Uno de los requisitos es que el programa admita la posibilidad de que el individuo\n    # tenga comision y calcular el porcentaje de ganancia en base a su productividad",
-        "detail": "Calculo de Nomina",
+        "importPath": "empleadoNomina",
+        "description": "empleadoNomina",
+        "peekOfCode": "class Empleado:\n    def __init__(self, ci_sal, nombre_sal, salarioPorHora_sal, horasTrabajadas_sal, productividad_sal, porcentajeComision_sal, horasExtras_sal, horasNocturnas_sal, bonoAsistencia_sal, minimoHorasAsistencia_sal, seguroSocial_sal, prestamos_sal, adelantos_sal):\n        # Constructor de la clase Empleado\n        self.ci_sal = ci_sal\n        self.nombre_sal = nombre_sal\n        self.salarioPorHora_sal = salarioPorHora_sal\n        self.horasTrabajadas_sal = horasTrabajadas_sal\n        self.productividad_sal = productividad_sal\n        self.porcentajeComision_sal = porcentajeComision_sal\n        self.horasExtras_sal = horasExtras_sal",
+        "detail": "empleadoNomina",
+        "documentation": {}
+    },
+    {
+        "label": "generar_informe_empleado",
+        "kind": 2,
+        "importPath": "informe_empleado",
+        "description": "informe_empleado",
+        "peekOfCode": "def generar_informe_empleado(empleado_sal):\n    #esta funcion es la que usaremos en el main y genera un informe detallado para un empleado\n    datos_sal = empleado_sal.calcular_salario()\n    informe_sal = f\"\"\"\n    Recibo Detallado para el Empleado: {datos_sal['nombre_sal']}\n    ---------------------------------------------------------\n    Salario Bruto Total: {datos_sal['salarioBrutoTotal_sal']}\n    Comisiones: {datos_sal['comisiones_sal']}\n    Bono de Asistencia: {datos_sal['bonoAsistencia_sal']}\n    Pago por horas Extras: {datos_sal['horasExtras_sal']}",
+        "detail": "informe_empleado",
         "documentation": {}
     },
     {
@@ -451,7 +405,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def menu_principal():\n    while True:\n        utl.cl()\n        print(\"\\nMenú Principal\")\n        print(\"1- Gestión de Empleados\")\n        print(\"2- Gestión de Asistencia\")\n        print(\"3- Salir\")\n        try:\n            op = int(input(\"Ingrese su opción: \"))\n            if op == 1:",
+        "peekOfCode": "def menu_principal():\n    while True:\n        utl.cl()\n        print(\"\\nMenú Principal\")\n        print(\"1- Gestión de Empleados\")\n        print(\"2- Gestión de Asistencia\")\n        print(\"3- Gestión de Salarios\")\n        print(\"4- Salir\")\n        try:\n            op = int(input(\"Ingrese su opción: \"))",
         "detail": "main",
         "documentation": {}
     },
@@ -460,7 +414,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "gestion_empleados = Empleados()\n# Crear una instancia única de Asistencia\ngestion_asistencia = Asistencia(gestion_empleados)\ndef menu_principal():\n    while True:\n        utl.cl()\n        print(\"\\nMenú Principal\")\n        print(\"1- Gestión de Empleados\")\n        print(\"2- Gestión de Asistencia\")\n        print(\"3- Salir\")",
+        "peekOfCode": "gestion_empleados = Empleados()\n# Crear una instancia única de Asistencia\ngestion_asistencia = Asistencia(gestion_empleados)\ndef menu_principal():\n    while True:\n        utl.cl()\n        print(\"\\nMenú Principal\")\n        print(\"1- Gestión de Empleados\")\n        print(\"2- Gestión de Asistencia\")\n        print(\"3- Gestión de Salarios\")",
         "detail": "main",
         "documentation": {}
     },
@@ -469,17 +423,26 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "gestion_asistencia = Asistencia(gestion_empleados)\ndef menu_principal():\n    while True:\n        utl.cl()\n        print(\"\\nMenú Principal\")\n        print(\"1- Gestión de Empleados\")\n        print(\"2- Gestión de Asistencia\")\n        print(\"3- Salir\")\n        try:\n            op = int(input(\"Ingrese su opción: \"))",
+        "peekOfCode": "gestion_asistencia = Asistencia(gestion_empleados)\ndef menu_principal():\n    while True:\n        utl.cl()\n        print(\"\\nMenú Principal\")\n        print(\"1- Gestión de Empleados\")\n        print(\"2- Gestión de Asistencia\")\n        print(\"3- Gestión de Salarios\")\n        print(\"4- Salir\")\n        try:",
         "detail": "main",
         "documentation": {}
     },
     {
-        "label": "Asistencia",
-        "kind": 6,
-        "importPath": "menu_gestion_asistencia",
-        "description": "menu_gestion_asistencia",
-        "peekOfCode": "class Asistencia:\n    def __init__(self, empleados):\n        self.empleados = empleados\n        self.asistencia = {}\n    def inicializar_asistencia(self):\n        dias = 30  # Por ejemplo, 30 días\n        for emp in self.empleados.employeeslist:\n            self.asistencia[emp.idlegajo] = [0] * dias\n        print(\"Asistencia inicializada correctamente.\")\n    def registrar_asistencia(self):",
-        "detail": "menu_gestion_asistencia",
+        "label": "menuprincipall",
+        "kind": 2,
+        "importPath": "MainSalarios",
+        "description": "MainSalarios",
+        "peekOfCode": "def menuprincipall():\n    sistema_sal = SistemaNomina()\n#Ingreso al usuario a un bucle infinito\n    while True:\n        print(\"\\n=== Sistema de Nómina ===\")\n        print(\"1. Agregar nuevo empleado\")\n        print(\"2. Buscar y modificar datos de un empleado\")\n        print(\"3. Mostrar informe detallado del empleado\")\n        print(\"4. Mostrar informe de Recursos Humanos (IPS)\")\n        print(\"5. Salir\")",
+        "detail": "MainSalarios",
+        "documentation": {}
+    },
+    {
+        "label": "modificar_datos_empleado",
+        "kind": 2,
+        "importPath": "MainSalarios",
+        "description": "MainSalarios",
+        "peekOfCode": "def modificar_datos_empleado(empleado_sal):\n    #esta funcion nos permite modificar los datos de un empleado existente,\n    #mantenemos el valor si el usuario no escribe nada\n    print(f\"\\n=== Modificar datos de {empleado_sal.nombre_sal} ===\")\n    try:\n        empleado_sal.nombre_sal = input(f\"Nombre [{empleado_sal.nombre_sal}]: \") or empleado_sal.nombre_sal\n        empleado_sal.salarioPorHora_sal = int(input(f\"Salario por hora [{empleado_sal.salarioPorHora_sal}]: \") or empleado_sal.salarioPorHora_sal)\n        empleado_sal.horasTrabajadas_sal = int(input(f\"Horas trabajadas [{empleado_sal.horasTrabajadas_sal}]: \") or empleado_sal.horasTrabajadas_sal)\n        empleado_sal.productividad_sal = int(input(f\"Productividad/ventas del mes [{empleado_sal.productividad_sal}]: \") or empleado_sal.productividad_sal)\n        empleado_sal.porcentajeComision_sal = float(input(f\"Porcentaje de comisión (en %) [{empleado_sal.porcentajeComision_sal * 100}]: \") or (empleado_sal.porcentajeComision_sal * 100)) / 100",
+        "detail": "MainSalarios",
         "documentation": {}
     },
     {
@@ -487,8 +450,35 @@
         "kind": 2,
         "importPath": "menu_gestion_asistencia",
         "description": "menu_gestion_asistencia",
-        "peekOfCode": "def menu_asistencia(asistencia):\n    while True:\n        print(\"\\nMenú de Gestión de Asistencia\")\n        print(\"1- Inicializar Asistencia\")\n        print(\"2- Registrar Asistencia\")\n        print(\"3- Mostrar Asistencia\")\n        print(\"4- Salir\")\n        try:\n            op = int(input(\"Ingrese su opción: \"))\n            if op == 1:",
+        "peekOfCode": "def menu_asistencia(asistencia):\n    dayofmonth = utl.dias_del_mes()\n    while True:\n        print(\"\\nMenú de Gestión de Asistencia\")\n        print(\"1- Inicializar Asistencia\")\n        print(\"2- Registrar Asistencia\")\n        print(\"3- Mostrar Asistencia\")\n        print(\"4- Salir\")\n        try:\n            op = int(input(\"Ingrese su opción: \"))",
         "detail": "menu_gestion_asistencia",
+        "documentation": {}
+    },
+    {
+        "label": "calcular_nomina_empleado",
+        "kind": 2,
+        "importPath": "NominadePagos",
+        "description": "NominadePagos",
+        "peekOfCode": "def calcular_nomina_empleado(ci_sal, nombre_sal, salarioPorHora_sal, horasTrabajadas_sal, productividad_sal, porcentajeComision_sal,\n                             horasExtras_sal, horasNocturnas_sal, bonoAsistencia_sal, minimoHorasAsistencia_sal,\n                             seguroSocial_sal, prestamos_sal, adelantos_sal):\n    #Calculamos  la nómina de un empleado y retornamos los resultados\n    empleado_sal = Empleado(\n        ci_sal, nombre_sal, salarioPorHora_sal, horasTrabajadas_sal, productividad_sal,\n        porcentajeComision_sal, horasExtras_sal, horasNocturnas_sal, bonoAsistencia_sal,\n        minimoHorasAsistencia_sal, seguroSocial_sal, prestamos_sal, adelantos_sal\n    )\n    return empleado_sal.calcular_salario()",
+        "detail": "NominadePagos",
+        "documentation": {}
+    },
+    {
+        "label": "generar_informe_detallado_recursos_humanos",
+        "kind": 2,
+        "importPath": "RecursosHumanos",
+        "description": "RecursosHumanos",
+        "peekOfCode": "def generar_informe_detallado_recursos_humanos(empleado_sal):\n# esta funcion es la que genera un informe detallado para el departamento de recursos humanos\n    # Información del empleado\n    nombre_sal = empleado_sal.nombre_sal\n    ci_sal = empleado_sal.ci_sal\n    horas_trabajadas_sal = empleado_sal.horasTrabajadas_sal\n    # Descuentos\n    seguro_social_sal = empleado_sal.seguroSocial_sal\n    prestamos_sal = empleado_sal.prestamos_sal\n    adelantos_sal = empleado_sal.adelantos_sal",
+        "detail": "RecursosHumanos",
+        "documentation": {}
+    },
+    {
+        "label": "SistemaNomina",
+        "kind": 6,
+        "importPath": "SistemadeNominas",
+        "description": "SistemadeNominas",
+        "peekOfCode": "class SistemaNomina:\n    def __init__(self):\n        self.empleados_sal = []\n    def agregar_empleado(self, empleado_sal):\n        #Agrega un empleado a la lista, con append lo llevamos al final\n        self.empleados_sal.append(empleado_sal)\n    def buscar_por_ci(self, ci_sal):\n        #Con el atributo ci buscamos el empleado por numero de ci\n        for empleado_sal in self.empleados_sal:\n            if empleado_sal.ci_sal == ci_sal:",
+        "detail": "SistemadeNominas",
         "documentation": {}
     },
     {

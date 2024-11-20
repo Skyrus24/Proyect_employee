@@ -11,9 +11,12 @@ class Asistencia:
         """
         Inicializa las asistencias de todos los empleados a 0 (ausente) para los días del mes.
         """
-        for empleado in self.empleados.employeeslist:
-            self.asistencias[empleado.idlegajo] = [0] * dias_mes
-            self.razones[empleado.idlegajo] = {}
+        if self.empleados.employeeslist == []:
+            print("Lista de empleados vacía.")
+        else:
+            for empleado in self.empleados.employeeslist:
+                self.asistencias[empleado.idlegajo] = [0] * dias_mes
+                self.razones[empleado.idlegajo] = {}
 
     def registrar_asistencia(self):
         """
