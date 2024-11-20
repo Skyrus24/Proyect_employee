@@ -12,6 +12,7 @@ gestion_empleados = Empleados()
 # Crear una instancia única de Asistencia
 gestion_asistencia = Asistencia(gestion_empleados)
 
+
 def menu_principal():
     while True:
         utl.cl()
