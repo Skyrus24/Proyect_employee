@@ -3,7 +3,7 @@
 
 #IMportamnos las funciones de los demas modulos
 from SistemadeNominas import SistemaNomina
-from InformePagos import generar_informe_empleado
+from informe_empleado import generar_informe_empleado
 from RecursosHumanos import generar_informe_detallado_recursos_humanos
 
 #Creamos el menu principal de creacion, modificacion y carga de datos

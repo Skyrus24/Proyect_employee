@@ -2,7 +2,7 @@
 
 from NominadePagos import calcular_nomina_empleado
 from empleadoNomina import Empleado
-from InformePagos import generar_informe_empleado
+from informe_empleado import generar_informe_empleado
 from RecursosHumanos import generar_informe_detallado_recursos_humanos
 
 class SistemaNomina:

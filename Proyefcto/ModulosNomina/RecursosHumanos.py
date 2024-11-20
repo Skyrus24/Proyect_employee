@@ -1,6 +1,6 @@
 # En este mpodulo generamos el informe para recursos humanos
 
-from InformePagos import generar_informe_empleado
+from informe_empleado import generar_informe_empleado
 
 def generar_informe_detallado_recursos_humanos(empleado_sal):
 # esta funcion es la que genera un informe detallado para el departamento de recursos humanos
