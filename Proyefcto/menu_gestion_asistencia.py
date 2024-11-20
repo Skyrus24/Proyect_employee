@@ -1,5 +1,6 @@
 import utility.utility as utl
 
+
 '''class Asistencia:
     def __init__(self, empleados):
         self.empleados = empleados
@@ -23,7 +24,7 @@ import utility.utility as utl
             print("Empleado no encontrado.")
 '''
 
-def menu_asistencia(asistencia):
+def menu_asistencia(gestion_asistencia):
     dayofmonth = utl.dias_del_mes()
     while True:
         print("\nMenú de Gestión de Asistencia")
@@ -35,12 +36,11 @@ def menu_asistencia(asistencia):
         try:
             op = int(input("Ingrese su opción: "))
             if op == 1:
-                asistencia.inicializar_asistencias(dayofmonth)
+                gestion_asistencia.inicializar_asistencias(dayofmonth)
             elif op == 2:
-                asistencia.registrar_asistencia()
+                gestion_asistencia.registrar_asistencia()
             elif op == 3:
-                for legajo, registro in asistencia.asistencia.items():
-                    print(f"Legajo {legajo}: {registro}")
+                gestion_asistencia.consultar_asistencia()
             elif op == 4:
                 print("Saliendo del menú de asistencia.")
                 break
