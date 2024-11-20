@@ -3,7 +3,7 @@ from moduloEmpleados.contrato import Contrato
 from utility.utility import pedir_alpha
 import utility.utility as utl
 class Empleado:
-    # inicializa los legajos en 0
+    # inicializa los legajos en 1
     legajo = 1
     # Construye los atributos
     def __init__(self):
@@ -15,9 +15,10 @@ class Empleado:
         self.barrio = str
         self.ciudad = str
         self.ci = int
-        self.idlegajo = None
         self.trabajos_anteriores = []
+        self.idlegajo = None
         self.registro()
+
 
     def registro(self):
         # Registrar todos los datos del empleado
@@ -30,12 +31,12 @@ class Empleado:
         self.direc = utl.pedir_alpha("Ingrese dirección del trabajador: ")
         self.barrio = utl.pedir_alpha("Ingrese barrio del trabajador: ")
         self.ciudad = utl.pedir_alpha("Ingrese ciudad del trabajador: ")
-        
-         # Asigna un número de legajo y automáticamente suma +1
+
+        # Asigna un número de legajo y automáticamente suma +1
         self.idlegajo = Empleado.legajo
         Empleado.legajo += 1
-        
-        # Llama a la función de registrar trabajos 
+
+        # Llama a la función de registrar trabajos
         self.regist_trabajos()
         
         # Ejecuta una instancia del objeto contrato, para almacenarse en empleado.

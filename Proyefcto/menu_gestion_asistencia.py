@@ -10,7 +10,7 @@ class Asistencia:
         print("Asistencia inicializada correctamente.")
 
     def registrar_asistencia(self):
-        legajo = input("Ingrese el legajo del empleado: ")
+        legajo = int(input("Ingrese el legajo del empleado: "))
         empleado = next((e for e in self.empleados.employeeslist if e.idlegajo == legajo), None)
         if empleado:
             dia = int(input("Ingrese el día (1-30): ")) - 1
