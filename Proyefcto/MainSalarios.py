@@ -7,7 +7,7 @@ from informe_empleado import generar_informe_empleado
 from RecursosHumanos import generar_informe_detallado_recursos_humanos
 
 #Creamos el menu principal de creacion, modificacion y carga de datos
-def menu_principal():
+def menuprincipall():
     sistema_sal = SistemaNomina()
 #Ingreso al usuario a un bucle infinito
     while True:
@@ -84,5 +84,3 @@ def modificar_datos_empleado(empleado_sal):
         empleado_sal.adelantos_sal = int(input(f"Monto de adelantos [{empleado_sal.adelantos_sal}]: ") or empleado_sal.adelantos_sal)
     except ValueError:
         print("Error: Asegúrese de ingresar datos válidos.")
-
-menu_principal()

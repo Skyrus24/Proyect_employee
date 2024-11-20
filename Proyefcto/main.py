@@ -1,3 +1,4 @@
+from MainSalarios import menuprincipall
 from moduloEmpleados.gestionEmpleados import Empleados
 from moduloEmpleados.menu_gestion_empleados import menu_gestion_empleados
 from menu_gestion_asistencia import Asistencia, menu_asistencia
@@ -15,7 +16,8 @@ def menu_principal():
         print("\nMenú Principal")
         print("1- Gestión de Empleados")
         print("2- Gestión de Asistencia")
-        print("3- Salir")
+        print("3- Gestión de Salarios")
+        print("4- Salir")
 
         try:
             op = int(input("Ingrese su opción: "))
@@ -24,6 +26,8 @@ def menu_principal():
             elif op == 2:
                 menu_asistencia(gestion_asistencia)
             elif op == 3:
+                menuprincipall()
+            elif op == 4:
                 print("Saliendo del sistema.")
                 break
             else:
